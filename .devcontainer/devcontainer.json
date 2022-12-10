@@ -6,25 +6,12 @@
     "memory": "1gb",
     "storage": "1gb"
   },
-  "onCreateCommand": {},
-  "updateContentCommand": {},
   "postCreateCommand": {
     "pip-install": "pip install --user --no-input -r requirements.txt"
   },
-  "postStartCommand": {},
-  "postAttachCommand": {},
-  
-  // Port forwarding
-  // https://containers.dev/implementors/json_reference/#port-attributes
-  // "portsAttributes": {
-  //   "5000": {
-  //     "label": "Application"
-  //   }
-  // },
-  // "forwardPorts": [5000],
-  
-  // IDE settings
-  // https://containers.dev/implementors/json_reference/#port-attributes
+  "postAttachCommand": {
+    "change-dir": "cd source"
+  },
   "customizations": {
     "vscode": {
       "settings": {},
