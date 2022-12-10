@@ -1,0 +1,36 @@
+{
+  "name": "Python",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.11",
+  "hostRequirements": {
+    "cpus": 1,
+    "memory": "1gb",
+    "storage": "1gb"
+  },
+  "onCreateCommand": {},
+  "updateContentCommand": {},
+  "postCreateCommand": {
+    "pip-install": "pip install --user --no-input -r requirements.txt"
+  },
+  "postStartCommand": {},
+  "postAttachCommand": {},
+  
+  // Port forwarding
+  // https://containers.dev/implementors/json_reference/#port-attributes
+  // "portsAttributes": {
+  //   "5000": {
+  //     "label": "Application"
+  //   }
+  // },
+  // "forwardPorts": [5000],
+  
+  // IDE settings
+  // https://containers.dev/implementors/json_reference/#port-attributes
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "ms-python.python"
+      ]
+    }
+  }
+}
