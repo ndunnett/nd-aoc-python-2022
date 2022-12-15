@@ -6,15 +6,14 @@
     "memory": "1gb",
     "storage": "1gb"
   },
-  "postCreateCommand": "sudo chmod 777 /etc/bash.bashrc; echo 'cd source' >> /etc/bash.bashrc; pip install --no-input --upgrade pip; pip install --user --no-input -r requirements.txt",
+  "postCreateCommand": "sudo chmod 777 /etc/bash.bashrc; echo 'cd /workspaces/nd-aoc-python-2022/source' >> /etc/bash.bashrc; pip install --no-input --upgrade pip; pip install --user --no-input -r requirements.txt",
   "customizations": {
     "vscode": {
       "settings": {
         "jupyter.disableJupyterAutoStart": true
       },
       "extensions": [
-        "ms-python.python",
-        "KevinRose.vsc-python-indent"
+        "ms-python.python"
       ]
     }
   }
