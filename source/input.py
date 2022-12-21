@@ -26,4 +26,4 @@ def load_input(day):
             return downloaded.splitlines()
 
     with open(file_path, encoding="utf-8", mode="r") as file:
-        return file.readlines()
+        return file.read().splitlines()
